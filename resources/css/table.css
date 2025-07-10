@@ -1,0 +1,34 @@
+/* Mengatur tabel agar responsif */
+#table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    /* Membuat tabel dapat di-scroll secara horizontal jika melebihi lebar layar */
+}
+
+/* Mengatur lebar kolom Aksi agar responsif di perangkat seluler */
+#table th:nth-child(4),
+#table td:nth-child(4) {
+    width: auto;
+    /* Atur lebar kolom Aksi agar dapat menyesuaikan konten */
+}
+
+/* Media queries untuk menyesuaikan tampilan pada perangkat seluler */
+@media screen and (max-width: 768px) {
+
+    /* Contoh penyesuaian untuk layar berukuran kecil */
+    #table {
+        display: block;
+        /* Tampilkan tabel sebagai block agar dapat di-scroll secara horizontal */
+        white-space: nowrap;
+        /* Hindari pemutusan kata dalam konten */
+    }
+
+    #table th,
+    #table td {
+        display: inline-block;
+        /* Tampilkan kolom sebagai inline-block agar dapat di-scroll secara horizontal */
+        width: auto;
+        /* Atur lebar kolom agar dapat menyesuaikan konten */
+    }
+}
